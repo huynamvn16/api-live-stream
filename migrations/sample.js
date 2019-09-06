@@ -30,6 +30,7 @@ module.exports = {
                 type: Sequelize.INTEGER
             }
         });
+
     },
     down: (queryInterface, Sequelize) => {
         return queryInterface.dropTable('sample');

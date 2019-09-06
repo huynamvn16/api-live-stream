@@ -1,27 +1,44 @@
 {
   "name": "livestream-api",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev" : "DEBUG=project_name:* npm start"
+    "dev": "DEBUG=project_name:* npm start"
   },
   "dependencies": {
+    "aws-sdk": "^2.512.0",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.17.1",
     "express-validator": "^6.1.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "pug": "2.0.0-beta11",
+    "pug": "^2.0.4",
     "redis": "^2.8.0",
-    "sequelize": "^5.13.0"
+    "sequelize": "^5.15.1",
+    "serverless-http": "^2.2.0",
+    "serverless-offline": "^5.10.1"
   },
   "devDependencies": {
     "sequelize-cli": "^5.5.0"
-  }
+  },
+  "description": "1. npm install 2. npm run dev",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linhntfabbi/live-stream-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linhntfabbi/live-stream-api/issues"
+  },
+  "homepage": "https://github.com/linhntfabbi/live-stream-api#readme"
 }

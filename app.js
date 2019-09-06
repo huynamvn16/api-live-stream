@@ -4,6 +4,10 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const serverless = require('serverless-http');
+const bodyParser = require('body-parser');
+const AWS = require('aws-sdk');
+
 const usersRouter = require('./routes/users');
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
@@ -11,6 +15,7 @@ const apiRouter = require('./routes/api');
 /** DB Config */
 // TODO
 /** DB Config End*/
+
 const app = express();
 
 // view engine setup
@@ -44,3 +49,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+module.exports.handler = serverless(app)
